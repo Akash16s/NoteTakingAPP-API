@@ -12,8 +12,8 @@ class noteModel(models.Model):
     user = models.ForeignKey(get_user_model(), on_delete=models.CASCADE)
     id = models.AutoField(primary_key=True)
     note = models.TextField(blank=True)
-    newUpdatedDate = models.DateTimeField(null=False)
-    lastUpdatedDate = models.DateTimeField(blank=True)
+    newUpdatedDate = models.DateField(null=False)
+    lastUpdatedDate = models.DateField(null=False)
 
     def __str__(self):
         return str(self.id)
